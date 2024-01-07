@@ -1,0 +1,175 @@
+body {
+  background-color: rgb(242, 241, 241);
+  font-family: "Gabarito", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: fixed;
+  width: 76rem;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuleft {
+  color: #b92b27;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.menuright {
+  width: 40rem;
+}
+
+.menuright a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.menuright a:hover {
+  color: #b92b27;
+}
+
+.menuright ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form {
+  margin-top: 5rem;
+  width: 45rem;
+  height: 30rem;
+  box-shadow: 0 0 20px rgb(202, 196, 196);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #b92b27;
+  margin-top: 0.4rem;
+  margin-left: 15rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form p span {
+  font-weight: bold;
+}
+
+form p {
+  margin-left: 10rem;
+  margin-top: 0.2rem;
+}
+
+input {
+  margin-left: 6.4rem;
+  width: 29.8rem;
+  margin-bottom: 1rem;
+  height: 2rem;
+  padding-left: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px solid black;
+}
+
+/* input:focus{
+  box-shadow :0 0 8px #b92b27;
+} */
+
+.editheader {
+  margin-left: 7rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #b92b27;
+}
+
+textarea {
+  width: 29.8rem;
+  height: 12rem;
+  margin-left: 6.4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 1.02rem;
+}
+
+/* textarea:focus{
+  box-shadow :0 0 8px #b92b27;
+} */
+
+button {
+  margin-left: 18rem;
+  margin-top: 10px;
+  width: 130px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0.01px solid gray;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+button:hover {
+  background-color: #bbb8b82d;
+  box-shadow: 0px 20px 20px #bbb8b82d;
+}
+
+@media only screen and (max-width: 767px) {
+  form {
+    margin-top: 6rem;
+    width: 23.5rem;
+    height: 32rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-left: 7rem;
+    margin-bottom: 1.5rem;
+  }
+  form p {
+    margin-left: 1.1rem;
+    font-size: 0.8rem;
+  }
+  input {
+    width: 20rem;
+    font-size: 1.1rem;
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .editheader {
+    margin-left: 1.5rem;
+  }
+  textarea {
+    width: 20rem;
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+  }
+  button {
+    margin-left: 7rem;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 4rem;
+  }
+  .menuleft {
+    font-size: 2.2rem;
+  }
+  .menuright {
+    display: none;
+  }
+}

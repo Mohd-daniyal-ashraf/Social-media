@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Newpost</title>
+    <link rel="stylesheet" href="/newpoststyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menuleft">Quora Post</div>
+      <div class="menuright">
+        <ul>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="http://localhost:8080/posts/newpost">New Post</a>
+        </ul>
+      </div>
+    </div>
+
+    <form action="http://localhost:8080/posts" method="post">
+      <h1>Create a new post</h1>
+
+      <div class="editheader">Enter username :</div>
+      <input
+        type="text"
+        placeholder="Enter usernmae."
+        name="username"
+        required
+      />
+
+      <div class="editheader">Enter profile image :</div>
+      <input
+        type="text"
+        placeholder="Enter Image address.."
+        name="image"
+        required
+      />
+
+      <div class="editheader">Enter post image :</div>
+      <input type="text" placeholder="Enter Image address.." name="postimg" />
+
+      <div class="editheader">Enter post content :</div>
+      <textarea cols="6" rows="1" name="content"></textarea>
+      <br />
+
+      <button type="submit">Add Post</button>
+    </form>
+  </body>
+</html>

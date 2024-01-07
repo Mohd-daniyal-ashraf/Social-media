@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Newpost</title>
+    <link rel="stylesheet" href="/editpost.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- menu -->
+    <div class="menu">
+      <div class="menuleft">Quora Post</div>
+      <div class="menuright">
+        <ul>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="http://localhost:8080/posts/newpost">New Post</a>
+        </ul>
+      </div>
+    </div>
+    <form
+      method="post"
+      action="http://localhost:8080/posts/<%= post.id%>?_method=PATCH"
+    >
+      <h1>Edit your post</h1>
+      <p>Post id : <span><%=post.id %></span></p>
+      <div class="editheader">Edit image address, if you want</div>
+      <input type="text" placeholder="Enter Image address.." name="postimg" />
+      <div class="editheader">Edit content, if you want</div>
+      <textarea cols="63" rows="13" name="content"><%=post.content%></textarea>
+      <br />
+      <button type="submit">Add Post</button>
+
+      <!-- <script>
+        let a = "dit your post ";
+        let idx = 0;
+        let text = document.querySelector("h1");
+
+        const typeeffect = setInterval(function () {
+          text.innerHTML += a[idx];
+          idx++;
+          if (idx === a.length) {
+            clearInterval(typeeffect);
+          }
+        }, 100);
+      </script> -->
+    </form>
+  </body>
+</html>

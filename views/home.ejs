@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <div class="loder-container">
+      <div class="loder"></div>
+    </div> -->
+
+    <div class="menu">
+      <div class="menuleft">Quora Post</div>
+      <div class="menuright">
+        <ul>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="http://localhost:8080/posts/newpost">New Post</a>
+        </ul>
+      </div>
+    </div>
+    <div id="main">
+      <% for(let post of posts){ %>
+      <div id="outer">
+        <div class="profile">
+          <div class="profileleft">
+            <img src="<%= post.image%>" alt="image" />
+            <h2>@ <%= post.username%></h2>
+          </div>
+          <div class="profileright">delete</div>
+        </div>
+        <div class="postcontent">
+          <p><%= post.content%></p>
+          <img src="<%= post.postimg%>" alt="image" />
+        </div>
+
+        <div class="btns">
+          <form
+            action="http://localhost:8080/posts/<%=post.id%>?_method=DELETE"
+            method="post"
+          >
+            <button class="btn">Delete post</button>
+          </form>
+          <form
+            action="http://localhost:8080/posts/<%=post.id%>"
+            target="_blank"
+          >
+            <button class="btn">See in detail</button>
+          </form>
+          <form action="http://localhost:8080/posts/<%=post.id%>/edit">
+            <button class="btn">Edit Post</button>
+          </form>
+        </div>
+      </div>
+      <%}%>
+    </div>
+    <script>
+      setTimeout(function () {
+        document.querySelector(".loder-container").style.display = "none";
+      }, 1000);
+    </script>
+  </body>
+</html>

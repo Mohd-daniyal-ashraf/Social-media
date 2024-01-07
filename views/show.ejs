@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #main{
+        /* margin-top: 0; */
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menuleft">Quora Post</div>
+      <div class="menuright">
+        <ul>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="http://localhost:8080/posts/newpost">New Post</a>
+        </ul>
+      </div>
+    </div>
+    <div id="main">
+      <div id="outer">
+        <div class="profile">
+          <div class="profileleft">
+            <img src="<%= showpost.image%>" alt="image" />
+            <h2>@ <%= showpost.username%></h2>
+          </div>
+          <div class="profileright">
+            delete
+          </div>
+        </div>
+        <div class="postcontent">
+          <p><%= showpost.content%></p>
+          <img src="<%= showpost.postimg%>" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

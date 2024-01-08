@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.listen(port, () => {
-  console.log("listen to port 8080");
+  console.log("ha bhai chal raha hai on 8080");
 });
 let posts = [
   {
